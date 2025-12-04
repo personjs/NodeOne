@@ -1,0 +1,31 @@
+[project]
+name = "nodeone"
+version = "0.1.0"
+description = "NodeOne - A PyQt6 System Management GUI"
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+packages = [
+    { include = "nodeone", from = "src" }
+]
+requires-python = ">=3.12"
+
+[tool.poetry.dependencies]
+PyQt6 = "^6.10.0"
+psutil = "*"
+pydantic = "^2.12.4"
+pydantic-settings = "^2.11.0"
+requests = "^2.32.5"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-qt = "*"
+
+[tool.poetry.scripts]
+start = "nodeone.app:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
